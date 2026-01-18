@@ -6,11 +6,13 @@ A long time ago, I had created this app just to make someone feel special on the
 
 To customize and run this project, you must first set up your development environment and install the necessary dependencies.
 
-1. Prerequisites
-   Ensure you have Node.js and npm installed on your machine.
+#### 1. Prerequisites
 
-2. Installation
-   After cloning the repository, navigate to the project folder and install the required node_modules:
+Ensure you have `Node.js` and `npm` installed on your machine.
+
+#### 2. Installation
+
+After cloning the repository, navigate to the project folder and install the required `node_modules`:
 
 ```bash
 npm install
