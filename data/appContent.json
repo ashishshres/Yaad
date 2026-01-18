@@ -1,0 +1,27 @@
+{
+  "welcome": {
+    "title": "Happy Birthday",
+    "name": "Yeju",
+    "subtitle": "Sending you a soft virtual hug on your special day. You are so loved!",
+    "buttonText": "Continue"
+  },
+
+  "splash": {
+    "title": "For Yeju",
+    "subtitle": "OPENING GIFT..."
+  },
+
+  "home": {
+    "dateBadge": "POUSH 9TH",
+    "greeting": "Happy Birthday,",
+    "name": "Yeju!",
+    "imageBadge": "Creating memories",
+    "noteTitle": "A little note for you",
+    "noteLines": [
+      "Dear Yeju, may this special day bring you closer to your dreams, fill your heart with joy, and surround you with the warmth of love.",
+      "You deserve all the beautiful moments coming your way. Thank you for being such a bright, kind soul in my life."
+    ],
+    "noteFooter": "Sent with Love",
+    "noteSignature": "Always."
+  }
+}
