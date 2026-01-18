@@ -2,7 +2,23 @@
 
 A long time ago, I had created this app just to make someone feel special on their day. Back then, I wanted every detail, the animations, the confetti, the music, and the messages to be perfect so someone could smile, feel remembered, and know how much someone mattered to me.
 
-## 🎨 How to Customize the App
+## Getting Started
+
+To customize and run this project, you must first set up your development environment and install the necessary dependencies.
+
+1. Prerequisites
+   Ensure you have Node.js and npm installed on your machine.
+
+2. Installation
+   After cloning the repository, navigate to the project folder and install the required node_modules:
+
+```bash
+npm install
+```
+
+This command reads the `package.json` and downloads all necessary libraries needed for the app to function.
+
+## How to Customize the App
 
 All personal content is separated from the code, so no programming knowledge is required for most changes.
 
@@ -100,5 +116,5 @@ Scan the QR code with the Expo Go app on your phone to preview.
 
 #### When ready to gift:
 
-- Build using Expo EAS (eas build --platform android or ios)
-- Share the APK (Android) or TestFlight link (iOS)
+- Build using Expo EAS (`eas build --platform android` or ios)
+- Share the `APK` (Android) or TestFlight link (iOS)
