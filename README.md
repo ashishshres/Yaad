@@ -26,7 +26,7 @@ All personal content is separated from the code, so no programming knowledge is 
 
 ### 1. Change All Texts & Messages
 
-Edit this single file: **`src/data/appContent.json`**
+Edit this single file: **`data/appContent.json`**
 
 ```json
 {
@@ -60,7 +60,7 @@ Edit this single file: **`src/data/appContent.json`**
 
 ### 2. Customize Carousel Quotes
 
-Edit the quotes that appear over photos in the Memories tab: **`src/data/slideData.json`**
+Edit the quotes that appear over photos in the Memories tab: **`data/slideData.json`**
 
 ```json
 {
@@ -79,7 +79,7 @@ Add or rewrite quotes to perfectly match your feelings.
 
 #### Main App Screens (Single Images)
 
-Place your chosen photos in **`src/assets/images/`** and keep the same filenames:
+Place your chosen photos in **`assets/images/`** and keep the same filenames:
 
 - `welcome-image.jpg` → Main photo on the Welcome screen
 - `splash-image.jpg` → Small circular icon on the Splash screen
@@ -90,7 +90,7 @@ Place your chosen photos in **`src/assets/images/`** and keep the same filenames
 
 Add as many photos as you want to the Memories tab carousel:
 
-Folder: **`src/assets/images/carousel/`**
+Folder: **`assets/images/carousel/`**
 
 Supported files:
 
@@ -103,8 +103,8 @@ Tip: Mix portrait and landscape photos, they all display beautifully full-screen
 
 Replace the soft background track:
 
-- Place your new music file (preferably MP3 format) in `src/assets/audio/`
-- Update the filename/path in `src/utils/backgroundMusic.ts` if needed
+- Place your new music file (preferably MP3 format) in `assets/audio/`
+- Update the filename/path in `utils/backgroundMusic.ts` if needed
 
 ### 5. Test & Share Your Creation
 
