@@ -35,7 +35,7 @@ interface Slide {
 }
 
 const rawData = slideData.slides;
-// We only need one clone at the end to bridge the gap back to the start
+
 const infiniteData: Slide[] = [
   ...rawData.map((item, index) => ({ ...item, originalIndex: index })),
   { ...rawData[0], originalIndex: 0 }, // Only one clone at the end
@@ -76,19 +76,16 @@ const MemoriesScreen: React.FC = () => {
         const isAtLastItem = currentIndex.current === rawData.length - 1;
 
         if (isAtLastItem) {
-          // 1. Scroll to the clone (visual continuation)
           flatListRef.current?.scrollToIndex({
             index: rawData.length,
             animated: true,
           });
 
-          // 2. Mid-animation silent reset to actual index 0
-          // We wait for the scroll animation to be nearly done, then snap to start
           setTimeout(() => {
             flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
             currentIndex.current = 0;
             startAnimation();
-          }, 500); // This matches the default scroll animation duration
+          }, 500);
         } else {
           const nextIndex = currentIndex.current + 1;
           currentIndex.current = nextIndex;
@@ -117,7 +114,6 @@ const MemoriesScreen: React.FC = () => {
     const offsetX = event.nativeEvent.contentOffset.x;
     const index = Math.round(offsetX / ITEM_WIDTH);
 
-    // If user swiped to the clone, snap them back to index 0
     if (index >= rawData.length) {
       flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
       currentIndex.current = 0;
@@ -165,7 +161,6 @@ const MemoriesScreen: React.FC = () => {
         onScrollBeginDrag={() => progressAnim.stopAnimation()}
         scrollEventThrottle={16}
         removeClippedSubviews={Platform.OS === "android"}
-        // This is key: allow the list to be slightly bouncy to hide the snap
         bounces={false}
       />
     </View>

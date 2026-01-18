@@ -1,5 +1,9 @@
-import { createAudioPlayer, setAudioModeAsync, type AudioPlayer } from 'expo-audio';
-import { AppState } from 'react-native';
+import {
+  createAudioPlayer,
+  setAudioModeAsync,
+  type AudioPlayer,
+} from "expo-audio";
+import { AppState } from "react-native";
 
 let player: AudioPlayer | null = null;
 let started = false;
@@ -8,9 +12,9 @@ let subscription: { remove: () => void } | null = null;
 const handleAppStateChange = (nextAppState: string) => {
   if (!player || !started) return;
 
-  if (nextAppState === 'background') {
+  if (nextAppState === "background") {
     player.pause();
-  } else if (nextAppState === 'active') {
+  } else if (nextAppState === "active") {
     player.play();
   }
 };
@@ -19,16 +23,14 @@ export const playBackgroundMusic = async () => {
   try {
     if (started) return;
 
-    // Set audio mode - disable background playback
+    // Set audio mode to disable background playback
     await setAudioModeAsync({
       playsInSilentMode: true,
       shouldPlayInBackground: false,
     });
 
     // Create audio player
-    player = createAudioPlayer(require('../assets/musics/background.mp3'));
-
-    // Configure looping and volume
+    player = createAudioPlayer(require("../assets/musics/background.mp3"));
     player.loop = true;
     player.volume = 0.7;
 
@@ -36,10 +38,10 @@ export const playBackgroundMusic = async () => {
     player.play();
     started = true;
 
-    // Add AppState listener to pause/resume on app focus changes
-    subscription = AppState.addEventListener('change', handleAppStateChange);
+    // Add AppState listener to pause and resume on app focus changes
+    subscription = AppState.addEventListener("change", handleAppStateChange);
   } catch (e) {
-    console.log('Error playing background music:', e);
+    console.log("Error playing background music:", e);
   }
 };
 
@@ -58,6 +60,6 @@ export const stopBackgroundMusic = () => {
       subscription = null;
     }
   } catch (e) {
-    console.log('Error stopping background music:', e);
+    console.log("Error stopping background music:", e);
   }
 };

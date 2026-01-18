@@ -134,15 +134,9 @@ export default function App() {
 
   useEffect(() => {
     if (Platform.OS === "android") {
-      // Enable edge-to-edge
       NavigationBar.setPositionAsync("absolute");
-
-      // Transparent navigation bar
       NavigationBar.setBackgroundColorAsync("transparent");
-
-      // Dark icons (for light UI)
       NavigationBar.setButtonStyleAsync("dark");
-
       NavigationBar.setVisibilityAsync("visible");
     }
   }, []);
