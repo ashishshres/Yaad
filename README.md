@@ -97,3 +97,8 @@ npx expo start
 ```
 
 Scan the QR code with the Expo Go app on your phone to preview.
+
+#### When ready to gift:
+
+- Build using Expo EAS (eas build --platform android or ios)
+- Share the APK (Android) or TestFlight link (iOS)
